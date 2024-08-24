@@ -19,6 +19,7 @@ class Solution {
             if(vis[i]==false){
                 c++;
                 bfs(i,list,V,vis);
+                // dfs(i, list, vis);
             }
         }
         return c;
@@ -35,6 +36,15 @@ class Solution {
                     vis[i]=true;
                     q.add(i);
                 }
+            }
+        }
+    }
+
+    public static void dfs(int x, ArrayList<ArrayList<Integer>> adj, boolean[] vis) {
+        vis[node] = true;
+        for (Integer neighbor : adj.get(node)) {
+            if (!vis[neighbor]) {
+                dfs(neighbor, adj, vis); 
             }
         }
     }
