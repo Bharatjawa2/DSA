@@ -19,7 +19,7 @@ class Solution {
             if(vis[adjnode]==0){
                 if(solve(adjnode,src,vis,adj)) return true;
             }
-                else if(adjnode != parent) return true;
+            else if(adjnode != parent) return true;
         }
         return false;
     }
