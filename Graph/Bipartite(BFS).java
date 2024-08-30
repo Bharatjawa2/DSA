@@ -1,6 +1,6 @@
 class Solution
 {
-    public boolean isBipartite(int V, ArrayList<ArrayList<Integer>>adj)
+    public boolean isBipartite(int V , ArrayList<ArrayList<Integer>>adj)
     {
         int[] color=new int[V];
         Arrays.fill(color,-1);
