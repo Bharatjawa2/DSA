@@ -1,6 +1,6 @@
 import java.util.*;
 class BubbleSort{
-  public static void main(String[] args){
+  public static void main(String[]  args){
     int size;
     int c=0;
     Scanner sc=new Scanner(System.in);
