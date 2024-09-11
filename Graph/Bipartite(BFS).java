@@ -10,7 +10,7 @@ class Solution
                 if(!check(i,V,color,adj)) return false;
             }
         }
-        return true;
+        return true ;
     }
     
     boolean check(int start,int V,int[] color,ArrayList<ArrayList<Integer>> adj){
