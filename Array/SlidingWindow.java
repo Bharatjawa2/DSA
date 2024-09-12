@@ -4,7 +4,7 @@ class Solution {
         int sum=0,j=0;
         for(int i=0;i<n;i++){
             sum+=arr[i];
-            while(sum>s && j<i){    // Here i do always mistake Remember!!!!
+            while(sum>s && j<i){     // Here i do always mistake Remember!!!!
                 sum-=arr[j];
                 j++;
             }
