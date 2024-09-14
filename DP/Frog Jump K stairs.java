@@ -10,7 +10,7 @@ public class Main {
         for (int i = 0; i < a; i++) {
             heights[i] = sc.nextInt();
         }
-        System.out.println(frogJump(a, heights, k));
+        System.out.println(frogJump(a,  heights, k));
     }
 
     public static int frogJump(int n, int heights[], int k) {
