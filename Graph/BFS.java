@@ -1,5 +1,5 @@
 class Solution {
-    public ArrayList<Integer> bfsOfGraph(int V, ArrayList<ArrayList<Integer>> adj) {
+    public ArrayList<Integer> bfsOfGraph(int V,  ArrayList<ArrayList<Integer>> adj) {
 
         ArrayList<Integer> bfs=new ArrayList<>();
         boolean[] vis=new boolean[V];
