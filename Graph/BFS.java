@@ -3,7 +3,7 @@ class Solution {
 
         ArrayList<Integer> bfs=new ArrayList<>();
         boolean[] vis=new boolean[V];
-        Queue<Integer> q=new LinkedList<>();
+        Queue<Integer> q=new  LinkedList<>();
         
         q.add(0);
         vis[0]=true;
