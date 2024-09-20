@@ -1,7 +1,7 @@
 import java.util.*;
 
 class Graph {
-    ArrayList<ArrayList<Integer>>  adjList = new ArrayList<>();
+    ArrayList<ArrayList<Integer>>  adjList =  new ArrayList<>();
     
     public Graph(int vertices) {
         adjList = new ArrayList<>(vertices);
