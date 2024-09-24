@@ -1,6 +1,6 @@
 class HelloWorld {
     public static void main(String[] args) {
-        String sent = "hello world ok,!byee";
+        String sent = "hello world  ok,!byee";
         String search = "ok";
         String[] arr = sent.split(" ");
         boolean found = false; 
