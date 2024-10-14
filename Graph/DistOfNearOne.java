@@ -5,7 +5,7 @@ class Pair{
     Pair(int first,int second,int third){
         this.first=first;
         this.second=second;
-        this.third=third;
+        this.third=third; 
     }
 }
 class Solution
