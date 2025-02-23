@@ -17,8 +17,7 @@ class Solution {
         PathVis[node]=1;
         for(int i:adj.get(node)){
             if(vis[i]==0){
-                if(solve(i,V,vis,PathVis,adj))
-                    return true;
+                if(solve(i,V,vis,PathVis,adj)) return true;
             }
             else if(PathVis[i]==1) return true;
         }
