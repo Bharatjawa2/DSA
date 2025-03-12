@@ -4,7 +4,7 @@ class Solution {
         ListNode fast=head;
         while (fast != null && fast.next != null && slow != null) {
             fast = fast.next.next;  
-            slow = slow.next;        
+            slow = slow.next;         
         }
         return slow;
     }
