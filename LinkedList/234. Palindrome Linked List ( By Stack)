@@ -5,7 +5,7 @@ class Solution {
         while(temp!=null){
             st.push(temp.val);
             temp=temp.next;
-        }
+        } 
         temp=head;
         while(temp!=null){
             if(temp.val!=st.pop()){
