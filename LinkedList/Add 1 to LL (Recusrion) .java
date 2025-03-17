@@ -1,3 +1,5 @@
+// TC: O(N)
+// SC: O(N)
 class Solution {
     public Node addOne(Node head) {
         int carry=solve(head);
