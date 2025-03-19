@@ -1,19 +1,21 @@
 class Solution {
     public double myPow(double x, int n) {
-        double ans=1.0;
-        long nn=n;
-        if(nn<0) nn=-1*nn;
-
-        while(nn>0){
-            if(nn%2==1){
-                ans=ans*x;
-                nn--;
-            }else{
-                x*=x;
-                nn/=2;
-            }
-        }
+        int nn=n;
+        if(n<0) nn=-1*nn;
+        double ans=pow(x,nn);
         if(n<0) return (double)1.0/(double)ans;
         return ans;
     }
+    double pow(double a,int b){
+        if(b==0) return 1;
+        double temp=pow(a,b/2);
+
+        if(b%2==0){
+            return (temp*temp);
+        }else{
+            return (a*temp*temp);
+        }
+    }
 }
+
+/ LogN
