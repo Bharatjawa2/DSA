@@ -4,15 +4,15 @@ class Solution {
         int MOD=1000000007;
         long[] left=new long[n];
         long[] right=new long[n];
-        NGL(arr,right,n);
-        PGL(arr,left,n);
+        NGE(arr,right,n);
+        PGE(arr,left,n);
         long ans=0;
         for(int i=0;i<n;i++){
             ans=(ans+(long)arr[i]*(i-left[i])*(right[i]-i))%MOD;
         }
         return (int)ans;
     }
-    void PGL(int[] arr,long[] left,int n){
+    void PGE(int[] arr,long[] left,int n){
         Stack<Integer> st=new Stack<>();
         for(int i=0;i<n;i++){
             while(!st.isEmpty() && arr[st.peek()]<arr[i]){
@@ -24,7 +24,7 @@ class Solution {
             st.push(i);
         }
     }
-    void NGL(int[] arr,long[] right,int n){
+    void NGE(int[] arr,long[] right,int n){
         Stack<Integer> st=new Stack<>();
         for(int i=n-1;i>=0;i--){
             while(!st.isEmpty() && arr[st.peek()]<=arr[i]){
