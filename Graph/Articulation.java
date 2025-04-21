@@ -8,7 +8,7 @@ class Solution {
         int[] mark = new int[V];
         
         for (int i = 0; i < V; i++) {
-            if (vis[i] == 0) {
+            if (vis[i] == 0) { 
                 dfs(i, -1, vis, tin, low, mark, adj);
             }
         }
