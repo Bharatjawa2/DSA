@@ -1,0 +1,22 @@
+class Solution {
+    public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+        List<TreeNode> l1=new ArrayList<>();
+        List<TreeNode> l2=new ArrayList<>();
+        solve(root,p,l1);
+        solve(root,q,l2);
+        int i=0;
+        while(i<l1.size() && i<l2.size() && l1.get(i)==l2.get(i)) i++;
+        return l1.get(i-1);
+    }
+    boolean solve(TreeNode root,TreeNode find,List<TreeNode> list){
+        if(root==null) return false;
+        list.add(root);
+        if(root==find) return true;
+
+        if(solve(root.left,find,list) || solve(root.right,find,list)){
+            return true;
+        }
+        list.remove(list.size()-1);
+        return false;
+    }
+}
