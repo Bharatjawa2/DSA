@@ -2,29 +2,27 @@ import java.util.* ;
 import java.io.*; 
 
 // Memorization
-public class Solution {
-    public static int frogJump(int n, int heights[]) {
-        int[] dp=new int[n+1];
+class Solution {
+    int minCost(int[] height) {
+        int n=height.length;
+        int[] dp=new int[n];
         Arrays.fill(dp,-1);
-        return solve(n-1,heights,dp);
+        return solve(0,n,height,dp);
     }
-
-    static int solve(int n,int[] heights,int[] dp){
-        if(n==0){
-            return 0;
-        }
-        if(dp[n]!=-1){
-            return dp[n];
-        }
-        int one=solve(n-1,heights,dp) + Math.abs(heights[n]-heights[n-1]);
+    int solve(int index,int n,int[] height,int[] dp){
+        if(index==n-1) return 0;
+        if(dp[index]!=-1) return dp[index];
+        
+        int one=Integer.MAX_VALUE;
+        if(index+1<n)
+            one=solve(index+1,n,height,dp)+Math.abs(height[index]-height[index+1]);
         int two=Integer.MAX_VALUE;
-        if(n>1){
-            two=solve(n-2,heights,dp) + Math.abs(heights[n]-heights[n-2]);
-        }
-        dp[n]=Math.min(one,two);
-        return dp[n];
+        if(index+2<n)
+            two=solve(index+2,n,height,dp)+Math.abs(height[index]-height[index+2]);
+        
+        return dp[index]=Math.min(one,two);
     }
-
+}
 }
 
 
