@@ -1,7 +1,7 @@
 class Solution {
     public int kosaraju(int V, ArrayList<ArrayList<Integer>> adj) {
         int[] vis = new int[V];
-        Stack<Integer> st = new Stack<>();
+        Stack<Integer> st = new Stack<>(); 
         
         for (int i = 0; i < V; i++) {
             if (vis[i] == 0) {
