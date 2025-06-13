@@ -1,7 +1,4 @@
-import java.util.* ;
-import java.io.*; 
 
-// Memorization
 class Solution {
     int minCost(int[] height) {
         int n=height.length;
@@ -23,7 +20,7 @@ class Solution {
         return dp[index]=Math.min(one,two);
     }
 }
-}
+
 
 
 // Tabulation
