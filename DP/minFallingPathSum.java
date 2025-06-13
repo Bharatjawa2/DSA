@@ -8,7 +8,7 @@ class Solution {
         }
         return ans;
     }
-    int solve(int row,int col,int[][] mat,int n,Integer[][] dp){
+    int solve(int row,int col,int[][] mat,int n,Integer[][] dp){ 
         if(row<0 || col<0 || row>=n || col>=n) return Integer.MAX_VALUE;
         if(row==n-1) return mat[row][col];
 
